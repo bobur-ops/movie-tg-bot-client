@@ -34,6 +34,7 @@ const ReserveTicket: React.FC<IProps> = ({ movie, date, seats, time }) => {
     const image = await captureTicket();
 
     try {
+      tg.MainButton.setParams({ text: `Loading...` });
       await captureTicket();
       const data = {
         username: user.username,
