@@ -16,7 +16,7 @@ interface IProps {
 const ReserveTicket: React.FC<IProps> = ({ movie, date, seats, time }) => {
   const barcodeRef = useRef(null);
   const ticket = useRef<any>(null);
-  const { tg, user, queryId } = useTelegram();
+  const { tg, user, queryId, onClose } = useTelegram();
   const [ticketImage, setTicketImage] = useState("");
 
   const captureTicket = async () => {
@@ -50,10 +50,19 @@ const ReserveTicket: React.FC<IProps> = ({ movie, date, seats, time }) => {
         },
         body: JSON.stringify(data),
       });
+
+      onClose();
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [user, date, time, queryId, movie, captureTicket]);
+
+  useEffect(() => {
+    tg.onEvent("mainButtonClicked", onSendData);
+    return () => {
+      tg.offEvent("mainButtonClicked", onSendData);
+    };
+  }, [onSendData]);
 
   useEffect(() => {
     JsBarcode(barcodeRef.current, movie?.title as string, {
@@ -89,7 +98,6 @@ const ReserveTicket: React.FC<IProps> = ({ movie, date, seats, time }) => {
           </div>
         </div>
       </div>
-      <button onClick={onSendData}>Capture</button>
     </div>
   );
 };
