@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0b060e;
+  color: white;
+}
+input {
+  font-size: 16px;
+}
+img {
+  object-fit: cover;
+  object-position: center;
+}
+.background-blur {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  filter: blur(100px);
+}
+.ellipse-1 {
+  width: 172.95px;
+  height: 200px;
+  background: #b14d8f;
+  border-radius: 100%;
+}
+.ellipse-2 {
+  width: 172.95px;
+  height: 200px;
+  background: #850b0b;
+  border-radius: 100%;
+}
+.ellipse-3 {
+  width: 172.95px;
+  height: 200px;
+  background: #00c2d0;
+  border-radius: 100%;
+}

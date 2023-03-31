@@ -1,0 +1,119 @@
+.select-date {
+  background-color: #433470;
+  min-height: 100vh;
+}
+.select-date .poster {
+  width: 100%;
+  height: 400px;
+  mix-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.select-date__content {
+  margin-top: -200px;
+  background: linear-gradient(
+    180deg,
+    rgba(222, 160, 30, 0) -1.75%,
+    rgba(222, 30, 30, 0) -1.74%,
+    #181611 85.33%
+  );
+  background-blend-mode: multiply;
+  height: fit-content;
+  width: 100%;
+  padding: 0 15px 50px;
+}
+.gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(222, 160, 30, 0) -1.75%,
+    rgba(222, 30, 30, 0) -1.74%,
+    #181611 85.33%
+  );
+  background-blend-mode: multiply;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+}
+.date-item {
+  background: linear-gradient(93.85deg, #543165 40.95%, #1580cd 125.47%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(177, 77, 143, 1);
+  border-radius: 10px;
+  font-size: 15px;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+.date-item.selected {
+  background: linear-gradient(
+    153.57deg,
+    #000000 40.46%,
+    rgba(125, 68, 99, 0) 118.19%
+  );
+}
+
+.time-item {
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(93.85deg, #543165 40.95%, #1580cd 125.47%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(177, 77, 143, 1);
+  font-size: 15px;
+}
+.time-item.selected {
+  background: linear-gradient(
+    153.57deg,
+    #000000 40.46%,
+    rgba(125, 68, 99, 0) 118.19%
+  );
+}
+
+.date-1,
+.date-5 {
+  margin-top: 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.date-2,
+.date-4 {
+  margin-top: 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+.date-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.date-1 .date-item,
+.date-5 .date-item,
+.date-2 .date-item,
+.date-4 .date-item {
+  height: 80px;
+  width: 50px;
+}
+
+.date-3 .date-item {
+  width: 60px;
+  height: 115px;
+}
+.date-3 .time-item {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  background: linear-gradient(93.85deg, #543165 40.95%, #1580cd 125.47%);
+  border-radius: 20px;
+  padding: 17px;
+  border: 3px solid rgba(177, 77, 143, 1);
+}

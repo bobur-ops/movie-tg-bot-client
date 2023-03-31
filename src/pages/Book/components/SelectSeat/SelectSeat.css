@@ -1,0 +1,83 @@
+.row {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 7px;
+}
+.seats {
+  width: 364px;
+  margin: 0 auto 60px;
+}
+.seat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seat svg {
+  fill: #c4c4c4;
+}
+.seat.reserved svg {
+  fill: #b14d8f;
+}
+.seat.selected svg {
+  fill: #00c2d0;
+}
+.cart {
+  position: relative;
+}
+
+.cart .rect {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(221, 218, 218, 0.53);
+  background-blend-mode: overlay;
+  backdrop-filter: blur(20px);
+  z-index: 2;
+  /* Note: backdrop-filter has minimal browser support */
+}
+
+.ellipses {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  left: 0;
+  top: 0;
+}
+
+.ellipses .cart-ellipse-1 {
+  width: 200px;
+  height: 200px;
+  background: #dd37ae;
+  filter: blur(100px);
+  border-radius: 100%;
+}
+.ellipses .cart-ellipse-2 {
+  width: 200px;
+  border-radius: 100%;
+  height: 200px;
+  background: #543165;
+  filter: blur(100px);
+}
+.ellipses .cart-ellipse-3 {
+  width: 200px;
+  height: 200px;
+  background: #30f1ff;
+  filter: blur(100px);
+  border-radius: 100%;
+}
+.circle-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #140f16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(20, 200, 212, 1);
+  cursor: pointer;
+}

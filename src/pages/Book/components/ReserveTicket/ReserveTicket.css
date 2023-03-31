@@ -1,0 +1,30 @@
+.ticket {
+  width: 250px;
+  height: 480px;
+  margin: 0 auto;
+  border: 2px solid rgba(48, 241, 255, 1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.ticket .img {
+  height: 328px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.6);
+}
+.ticket .img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+.ticket .rect {
+  width: 100%;
+  height: 152px;
+  background: #232323;
+  /* background: linear-gradient(
+    98.73deg,
+    rgba(255, 237, 237, 0.04) 7.57%,
+    rgba(255, 237, 237, 0) 99.33%
+  );
+  backdrop-filter: blur(20px); */
+  padding: 22px 10px 9px;
+}
