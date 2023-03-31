@@ -44,7 +44,7 @@ const ReserveTicket: React.FC<IProps> = ({ movie, date, seats, time }) => {
         queryId: queryId,
         title: movie?.title,
       };
-      const result = await fetch("http://localhost:3000/book", {
+      const result = await fetch("https://cinema-bot-app.herokuapp.com/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
